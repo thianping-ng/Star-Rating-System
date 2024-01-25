@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: #1D9286;
+}
+
+.container{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 9px;
+    position: relative;
+}
+
+.wrapper{
+    display: none;
+}
+
+.wrapper .text{
+    color: #1D9286;
+    font-size: 25px;
+}
+
+.wrapper .back{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 10px;
+    padding-top: 5px;
+    color: #1D9286;
+    cursor: pointer;
+}
+
+.back:hover{
+    text-decoration: underline;
+}
+
+.star{
+    display: inline-block;
+    text-align: center;
+}
+
+.star label{
+    margin: 10px;
+    font-size: 40px;
+    color: #1D9286;
+    transition: all .2s ease;
+    float: right;
+}
+
+input{
+    display: none;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label
+{
+    color: #ffc227;
+    font-size: 43px;
+}
+
+input:checked ~ label{
+    color: #ffc227;
+}
+
+input#rate-5:checked ~ label{
+    color: #ffc227;
+    text-shadow: 0 0 20px #ffff00;
+    float: left;
+}
+
+#rate-1:checked ~ header::before{
+    content:"😤😤😤😤😤";
+}
+
+#rate-2:checked ~ header::before{
+    content:"😒😒😒😒😒";
+}
+
+#rate-3:checked ~ header::before{
+    content:"😀😀😀😀😀";
+}
+
+#rate-4:checked ~ header::before{
+    content:"😘😘😘😘😘";
+}
+
+#rate-5:checked ~ header::before{
+    content:"😍😍😍😍😍";
+}
+
+.form{
+    width: 100%;
+    margin: auto;
+    display: none;
+}
+
+input:checked ~ .form{
+    display: block;
+}
+
+.form header{
+    margin-top: 5rem;
+}
+
+
+.customer-feedback{
+    height: 150px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #1D9286;
+    margin-block: 1rem;
+    text-align: left;
+    cursor:text;
+    overflow: hidden;
+}
+
+textarea{
+    resize: none;
+    background-color: #1D9286;
+    outline: none;
+    border: 1px solid #1D9286;
+    color: white;
+    font-size: 1rem;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+}
+
+textarea::placeholder{
+    color: white;
+}
+
+.btn{
+    width: 100%;
+}
+
+.btn button{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: #1D9286;
+    color: white;
+    background-color: #1D9286;
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: all .2s ease;
+}
+
+button:hover{
+    background: #034b43;
+    font-size: 1.2rem;
+}
